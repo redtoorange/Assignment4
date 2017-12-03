@@ -1,7 +1,8 @@
 package constants;
 
 /**
- * AppConstants.java - Maintain all of the Constants used in the GUI in a single place for easier editing.
+ * AppConstants.java - Maintain all of the Constants used in the GUI in a single
+ * place for easier editing.
  *
  * @author Andrew McGuiness
  * @version 12/3/2017

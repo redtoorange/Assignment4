@@ -1,6 +1,7 @@
 /**
- * ListNode.java - This Class represents a single node within a LinkedList data Structure (AddressList).  The class
- * holds information about an "Address Book" entry.  Once the node has been created, the data held becomes immutable,
+ * ListNode.java - This Class represents a single node within a LinkedList data
+ * Structure (AddressList).  The class holds information about an "Address Book"
+ * entry.  Once the node has been created, the data held becomes immutable,
  * but the Node's nextNode can be changed, allowing sorting or relocation.
  *
  * @author Andrew McGuiness
@@ -23,7 +24,8 @@ public class ListNode {
      * @param address     mailing address of this node
      * @param dateOfBirth date of birth for this node
      */
-    public ListNode( String name, String telephone, String email, String address, String dateOfBirth ) {
+    public ListNode( String name, String telephone, String email,
+                     String address, String dateOfBirth ) {
         this.name = name;
         this.telephone = telephone;
         this.email = email;
@@ -100,7 +102,8 @@ public class ListNode {
 
 
     /**
-     * Get the String representation of this ListNode, does not include data about the next node
+     * Get the String representation of this ListNode, does not include data
+     * about the next node.
      *
      * @return String representation of this ListNode
      */

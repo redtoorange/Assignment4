@@ -1,7 +1,8 @@
 /**
- * AddressList.java - The AddressList is a Singly Linked List data structure that maintains a collection of ListNodes.
- * Each ListNode represents a single entry in an "Address Book".  Methods are provided for searching the AddressList by
- * name or by telephone number.
+ * AddressList.java - The AddressList is a Singly Linked List data structure
+ * that maintains a collection of ListNodes.  Each ListNode represents a single
+ * entry in an "Address Book".  Methods are provided for searching the
+ * AddressList by name or by telephone number.
  *
  * @author Andrew McGuiness
  * @version 12/2/2017
@@ -9,7 +10,7 @@
 public class AddressList {
     private static final String NO_MATCH = "No matching data";
     private ListNode head;
-    private ListNode currentNode;   //Not used, left in because the project specified it.
+    private ListNode currentNode;   //Not used, left in because of project.
 
     /**
      * Does the AddressList contain any entries?
@@ -29,7 +30,8 @@ public class AddressList {
      * @param address address of the new entry
      * @param dob     date of birth of the new entry
      */
-    public void addToFront( String name, String tel, String email, String address, String dob ) {
+    public void addToFront( String name, String tel, String email,
+                            String address, String dob ) {
         ListNode newNode = new ListNode( name, tel, email, address, dob );
         newNode.setNextNode( head );
         head = newNode;
@@ -45,11 +47,14 @@ public class AddressList {
      * @param address address of the new entry
      * @param dob     date of birth of the new entry
      */
-    public void addToBack( String name, String tel, String email, String address, String dob ) {
+    public void addToBack( String name, String tel, String email,
+                           String address, String dob ) {
+        ListNode newNode = new ListNode( name, tel, email, address, dob );
+
         if ( head == null )
-            head = new ListNode( name, tel, email, address, dob );
+            head = newNode;
         else
-            getTailNode( head ).setNextNode( new ListNode( name, tel, email, address, dob ) );
+            getTailNode( head ).setNextNode( newNode );
     }
 
     /** Recursive Helper for addToBack. */
@@ -83,7 +88,8 @@ public class AddressList {
     }
 
     /**
-     * Get the String representation of this AddressList, but with the entries in reverse order.
+     * Get the String representation of this AddressList, but with the entries
+     * in reverse order.
      *
      * @return String representation of AddressList in reverse order.
      */
@@ -104,7 +110,8 @@ public class AddressList {
     }
 
     /**
-     * Return a new AddressList that contains the same entries as this one, but in reverse order.  The new AddressList
+     * Return a new AddressList that contains the same entries as this one, but
+     * in reverse order.  The new AddressList
      * is completely independent from the original.
      *
      * @return AddressList with the same entries but reversed order.
@@ -120,7 +127,12 @@ public class AddressList {
     /** Recursive Helper for reverse. */
     private void reverseCopyToList( ListNode current, AddressList list ) {
         if ( current != null ) {
-            list.addToFront( current.getName(), current.getTelephone(), current.getEmail(), current.getAddress(), current.getDateOfBirth() );
+            list.addToFront(
+                    current.getName(), current.getTelephone(),
+                    current.getEmail(), current.getAddress(),
+                    current.getDateOfBirth()
+            );
+
             reverseCopyToList( current.getNextNode(), list );
         }
     }
@@ -144,10 +156,10 @@ public class AddressList {
     }
 
 
-    //-------------------------------------------------------------------------------------
-    //-------------------------------------------------------------------------------------
-    // Data Query By Name -----------------------------------------------------------------
-    //-------------------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
+    // Data Query By Name ------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Search for a email address based on a name.
@@ -202,10 +214,10 @@ public class AddressList {
         return findNodeByName( current.getNextNode(), name );
     }
 
-    //-------------------------------------------------------------------------------------
-    //-------------------------------------------------------------------------------------
-    // Data Query By Telephone ------------------------------------------------------------
-    //-------------------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
+    // Data Query By Telephone -------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Search for a name based on a telephone number.
