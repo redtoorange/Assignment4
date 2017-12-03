@@ -180,8 +180,8 @@ public class AddressListTest {
     public void testPhoneNumberByName() throws Exception {
         AddressList list = new AddressList();
 
-        Assert.assertTrue( "No matching data.".equals( list.phoneNumberByName( "Andrew" ) ) );
-        Assert.assertTrue( "No matching data.".equals( list.phoneNumberByName( "Tika" ) ) );
+        Assert.assertTrue( "No matching data".equals( list.phoneNumberByName( "Andrew" ) ) );
+        Assert.assertTrue( "No matching data".equals( list.phoneNumberByName( "Tika" ) ) );
 
         list.addToFront( "Andrew", "8049331266",
                 "redtoorange@gmail.com", "817 Canyon Ridge",
@@ -201,8 +201,8 @@ public class AddressListTest {
     public void testEmailByName() throws Exception {
         AddressList list = new AddressList();
 
-        Assert.assertTrue( "No matching data.".equals( list.emailByName( "Andrew" ) ) );
-        Assert.assertTrue( "No matching data.".equals( list.emailByName( "Tika" ) ) );
+        Assert.assertTrue( "No matching data".equals( list.emailByName( "Andrew" ) ) );
+        Assert.assertTrue( "No matching data".equals( list.emailByName( "Tika" ) ) );
 
         list.addToFront( "Andrew", "8049331266",
                 "redtoorange@gmail.com", "817 Canyon Ridge",
@@ -222,8 +222,8 @@ public class AddressListTest {
     public void testNameByPhoneNumber() throws Exception {
         AddressList list = new AddressList();
 
-        Assert.assertTrue( "No matching data.".equals( list.nameByPhoneNumber( "Andrew" ) ) );
-        Assert.assertTrue( "No matching data.".equals( list.nameByPhoneNumber( "Tika" ) ) );
+        Assert.assertTrue( "No matching data".equals( list.nameByPhoneNumber( "Andrew" ) ) );
+        Assert.assertTrue( "No matching data".equals( list.nameByPhoneNumber( "Tika" ) ) );
 
         list.addToFront( "Andrew", "8049331266",
                 "redtoorange@gmail.com", "817 Canyon Ridge",
@@ -243,8 +243,8 @@ public class AddressListTest {
     public void testDobByName() throws Exception {
         AddressList list = new AddressList();
 
-        Assert.assertTrue( "No matching data.".equals( list.dobByName( "Andrew" ) ) );
-        Assert.assertTrue( "No matching data.".equals( list.dobByName( "Tika" ) ) );
+        Assert.assertTrue( "No matching data".equals( list.dobByName( "Andrew" ) ) );
+        Assert.assertTrue( "No matching data".equals( list.dobByName( "Tika" ) ) );
 
         list.addToFront( "Andrew", "8049331266",
                 "redtoorange@gmail.com", "817 Canyon Ridge",

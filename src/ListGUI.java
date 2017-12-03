@@ -1,16 +1,18 @@
+import constants.AppConstants;
+
 import javax.swing.*;
 import java.awt.*;
 
-import static AppConstants.*;
+import static constants.AppConstants.*;
 
 /**
- * MainWindow.java - This class is the View of the Application.  It has input fields for user input, buttons to control
+ * ListGUI.java - This class is the View of the Application.  It has input fields for user input, buttons to control
  * the underlying data structure(AddressList) and a TextArea that allows for application output.
  *
  * @author Andrew McGuiness
  * @version 12/2/2017
  */
-public class MainWindow extends JFrame {
+public class ListGUI extends JFrame {
     private JPanel rootPanel;
     private AddressList list;
 
@@ -23,8 +25,8 @@ public class MainWindow extends JFrame {
     private JTextArea outputArea;
 
 
-    /** Create and display a new instance of the MainWindow. */
-    public MainWindow() {
+    /** Create and display a new instance of the ListGUI. */
+    public ListGUI() {
         list = new AddressList();
 
         initGUI();

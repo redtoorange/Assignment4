@@ -7,7 +7,7 @@
  * @version 12/2/2017
  */
 public class AddressList {
-    private static final String NO_MATCH = "No matching data.";
+    private static final String NO_MATCH = "No matching data";
     private ListNode head;
     private ListNode currentNode;   //Not used, left in because the project specified it.
 
