@@ -153,14 +153,26 @@ public class ListGUI extends JFrame {
         // toString Button
         button = getButton( "toString", buttonDim );
         button.addActionListener(
-                ( e ) -> outputArea.append( list.toString() )
+                ( e ) -> {
+                    String data = list.toString();
+                    if( data.isEmpty())
+                        outputArea.append( "Address List is Empty\n" );
+                    else
+                        outputArea.append( list.toString() );
+                }
         );
         addToPanel( buttonPanel, button, gbc, 0, 1 );
 
         // reverseToString Button
         button = getButton( "reverseToString", buttonDim );
         button.addActionListener(
-                ( e ) -> outputArea.append( list.reverseToString() )
+                ( e ) -> {
+                    String data = list.toString();
+                    if( data.isEmpty())
+                        outputArea.append( "Address List is Empty\n" );
+                    else
+                        outputArea.append( list.reverseToString() );
+                }
         );
         addToPanel( buttonPanel, button, gbc, 1, 1 );
 
@@ -172,7 +184,7 @@ public class ListGUI extends JFrame {
         // isEmpty Button
         button = getButton( "isEmpty", buttonDim );
         button.addActionListener(
-                ( e ) -> outputArea.append( "List is Empty: " + list.isEmpty() + "\n" )
+                ( e ) -> outputArea.append( "List is " + (!list.isEmpty()?"not ":"") + "empty.\n" )
         );
         addToPanel( buttonPanel, button, gbc, 1, 2 );
 
